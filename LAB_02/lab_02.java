@@ -8,9 +8,8 @@ public class lab_02 {
         int l=0;
         String[] names = new String[1024];
         String tname;
-        String[] nname = new String[l];
-        String[] kname = new String[l];
         do {
+            System.out.println("**********MENU**********");
             System.out.println("1.Enter a Name.\n2.Search for a Name.\n3.Remove a name.\n4.Show all names.");
             System.out.println("Enter your choice.");
             ch = Integer.parseInt(scan.nextLine());
@@ -28,7 +27,9 @@ public class lab_02 {
                                 names[l]=tname;
                             }
                             l++;
-                            System.out.println("Name added to the list."+l);
+                            System.out.println("========================");
+                            System.out.println(l+" Name added to the list.");
+                            System.out.println("========================");
                             for(int i=0;i<l;i++){
                                 System.out.println(names[i]);
                             }
@@ -43,20 +44,21 @@ public class lab_02 {
                     for(int i=0;i<l;i++){
                         if(sname.equals(names[i])){
                             flag =1;
-                            //System.out.println("Name is present in the list.");
                             break;
                         }
                         else{
                             flag=0;
-                            //System.out.println("Name is not present in the list.");
-                            //break;
                         }
                     }
                     if(flag==1){
+                        System.out.println("============================");
                         System.out.println("Name is present in the list.");
+                        System.out.println("============================");
                     }
                     else{
+                        System.out.println("================================");
                         System.out.println("Name is not present in the list.");
+                        System.out.println("================================");
                     }
                     break;
                 case 3:
@@ -67,9 +69,9 @@ public class lab_02 {
                     for(int j=0;j<l;j++){
                         if(rname.equals(names[j])){
                             v=1;
-                            rname = "0";
-                            //System.out.println("Name removed.");
-                            names[j] = names[j+v];
+                            for(int g=0;g<l;g++){
+                                names[g] = names[g+v];
+                            }
                             l--;
                             count=1;
                             break;
@@ -77,21 +79,28 @@ public class lab_02 {
                         count=0;
                     }
                     if(count==1){
+                        System.out.println("=============");
                         System.out.println("Name removed.");
+                        System.out.println("=============");
                     }
                     else{
+                        System.out.println("=============================");
                         System.out.println("Name not present in the list.");
+                        System.out.println("=============================");
                     }
                     break;
                 case 4:
-                    //String[] nname = new String[l];
+                    System.out.println("===================");
                     System.out.println("Showing all names: ");
+                    System.out.println("===================");
                     for(int z=0;z<l;z++){
                         System.out.println(names[z]);
                     }
                     break;
                 default:
-                    System.out.println("Please enter between 1-4");
+                    System.out.println("============================================");
+                    System.out.println("INVALID INPUT!!!!!\nPlease enter between 1-4");
+                    System.out.println("============================================");
                     break;
             }
         } while (ch<5);
