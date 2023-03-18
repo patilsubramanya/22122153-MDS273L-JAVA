@@ -1,0 +1,6 @@
+Registration Number: 102
+Name: akshay
+Email: akshay@
+Phone: 8465184151
+Class: mscds
+Department: data sci
