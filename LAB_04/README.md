@@ -1,9 +1,9 @@
-#Write a JAVA Menu driven program that does the following:
-##You can ONLY have the below variables as global variables
+# Write a JAVA Menu driven program that does the following:
+## You can ONLY have the below variables as global variables
 * Account Number
 * Account Holder Name
 * Account Balance
-###You MUST have the below as functions
+### You MUST have the below as functions
 * To initialize the customer
 * To deposit money
 * To withdraw money
